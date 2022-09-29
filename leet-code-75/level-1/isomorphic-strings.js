@@ -29,16 +29,19 @@ var isIsomorphic = function (s, t) {
   let tBuilt = []; // 1
   const sMap = new Map(); // 1
 
-  
-  for (let i = 0; i < s.length; i++) { // 1 + 2n
+  for (let i = 0; i < s.length; i++) {
+    // 1 + 2n
     const char = s[i]; //n
-    if (sMap.has(char)) { //n 
+    if (sMap.has(char)) {
+      //n
       tBuilt[i] = sMap.get(char); //n
-    } else if (Array.from(sMap.values()).includes(t[i])) { //n
+    } else if (Array.from(sMap.values()).includes(t[i])) {
+      //n
       return false; // 1
-    } else { //n
+    } else {
+      //n
       sMap.set(char, t[i]); //n
-      tBuilt[i] = t[i]; //n 
+      tBuilt[i] = t[i]; //n
     }
   }
 
@@ -51,9 +54,19 @@ console.log(isIsomorphic("paper", "title"));
 console.log(isIsomorphic("badc", "baba"));
 
 /**
- * Analysis: 4 + 8n 
- * 
+ * Analysis: 4 + 8n
+ *
  * Time and space complexity: O(n)
+ *
+ * The analysis of this function is a little bit trick considering
+ * each conditional inside the loop can run a varying number of times
+ * and none of them can run n amount of times. The center if statement
+ * conditional runs n times, but the block of it can only occur once,
+ * and the first and last if statement will only run around n / 2 times.
+ *
+ * There are no nested loops and even though there are two 
+ * variables with n growth, their growth is n * 2 which is ultimately O(n).
+ * This makes space and time O(n).
  * 
  * solution comparison: https://leetcode.com/problems/isomorphic-strings/submissions/811661502/
  */
