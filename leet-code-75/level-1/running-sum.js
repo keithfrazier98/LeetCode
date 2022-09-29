@@ -34,14 +34,9 @@ console.log(runningSum([1, 1, 1, 1, 1])); // => [ 1, 2, 3, 4, 5 ]
 console.log(runningSum([3, 1, 2, 10, 1])); // => [ 3, 4, 6, 16, 17 ]
 
 /**
- * Asymptotic Analysis by line
- * 
- *  23 x1
- *  24 - 27 x(n)
- *  29 x1
- * 
- *  Strict Analysis = 4n + 2
- * 
+ *  Analysis by line f(n) = 4n + 2
+ *
  *  O notation = 0(n)
  *
+ *  LC Solution Comparison: https://leetcode.com/submissions/detail/811582274/
  */
