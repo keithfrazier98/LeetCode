@@ -72,5 +72,17 @@ But as you consider the steps that aren't determined by `n`, you can see that as
 | 100  | 300  | 4   | 304  | 1.31%                          |
 | 1000 | 3000 | 4   | 3004 | 0.013%                         |
 
+So in the end, the "Rate of growth" commonly known as the "Order of growth", is entirely determined by the unknown variables of a function. In this way the variable factors of an equation determine the asymptote ergo the ultimate complexity of any particular function.
 
-So in the end, the "Rate of growth" commonly known as the "Order of growth", is entirely determined by the unknown variables of a function. In this way the variable factors of an equation determine the asymptote ergo the ultimate complexity of any particular function. 
+## Common Functions Resource:
+
+| Name                     | Function                              | Use with big O |
+| ------------------------ | ------------------------------------- | -------------- |
+| Constant                 | f(n) = 1                              | O(1)           |
+| Logarithmic              | f(n) = log n                          | O(log n)       |
+| Linear                   | f(n) = n                              | O(n)           |
+| Log linear               | f(n) = n log n                        | O(n log n)     |
+| Quadratic                | f(n) = n2                             | O(n2)          |
+| Cubic                    | f(n) = n3                             | O(n3)          |
+| Higher-order polynomials | f(n) = nk , where k > 3               | O(nk)          |
+| Exponential              | f(n) = cn , where c > 1 is a constant | O(cn)          |
