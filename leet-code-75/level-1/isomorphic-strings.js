@@ -48,10 +48,10 @@ var isIsomorphic = function (s, t) {
   return tBuilt.join("") === t; // 1
 };
 
-console.log(isIsomorphic("egg", "add"));
-console.log(isIsomorphic("foo", "bar"));
-console.log(isIsomorphic("paper", "title"));
-console.log(isIsomorphic("badc", "baba"));
+console.log(isIsomorphic("egg", "add")); // true
+console.log(isIsomorphic("foo", "bar")); //false
+console.log(isIsomorphic("paper", "title")); //true
+console.log(isIsomorphic("badc", "baba")); // false
 
 /**
  * Analysis: 4 + 8n
@@ -64,9 +64,9 @@ console.log(isIsomorphic("badc", "baba"));
  * conditional runs n times, but the block of it can only occur once,
  * and the first and last if statement will only run around n / 2 times.
  *
- * There are no nested loops and even though there are two 
+ * There are no nested loops and even though there are two
  * variables with n growth, their growth is n * 2 which is ultimately O(n).
  * This makes space and time O(n).
- * 
+ *
  * solution comparison: https://leetcode.com/problems/isomorphic-strings/submissions/811661502/
  */
