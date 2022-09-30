@@ -37,13 +37,10 @@ var mergeTwoListsArray = function (list1, list2) {
 // console.log(mergeTwoListsArray([1, 2, 4], []));
 
 /**
- * This LC question is a bit frustrating because they define the problem
- * referencing linked lists but they don't ever show the actual linked list
- * if you log it to the console so it seems that the function is just passed
+ * This LC question defines the problem referencing linked lists but they don't 
+ * ever show the actual linked list so it seems that the function is just passed
  * arrays for the tests. The solution above is for arrays. The solution below
  * is for linked lists as defined by the ListNode function below.
- *
- *
  *
  * Definition for singly-linked list.
  * function ListNode(val, next) {
